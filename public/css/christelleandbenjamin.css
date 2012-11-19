@@ -22,8 +22,8 @@ body {
   margin: 0;
 }
 .navbar .navbar-inner ul.nav li > a {
-  padding: 15px 10px 15px;
-  line-height: 65px;
+  line-height: 64px;
+  margin: 0;
 }
 .navbar .navbar-inner ul.nav li.active a,
 .navbar .navbar-inner ul.nav li:hover a {
