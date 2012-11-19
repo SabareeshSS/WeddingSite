@@ -2,6 +2,8 @@
 body{
 	font-family: 'Anaheim';
 	line-height: 1.2em;
+	padding:0;
+	margin:auto;
 }
 .navbar {
 	background:url('../img/bck_header.png') repeat;
@@ -29,7 +31,13 @@ body{
 }
 
 .container-fluid {
+	margin:auto;
 	background:url('../img/bck-general.jpg') repeat;
+	padding: 20px;
+	& > * {
+		max-width: 1200px;
+		margin:auto;
+	}
 }
 
 .container-fluid.white {
