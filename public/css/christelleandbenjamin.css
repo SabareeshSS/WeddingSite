@@ -44,10 +44,13 @@ body {
 p {
   text-align: justify;
 }
-.btn {
+.submitForm {
   height: 31px;
-  width: 32px;
-  background: url(../img/form_btn.jpg) no-repeat 0 0 !important;
+  width: 32px!important;
+  background: url(../img/form_btn.png) no-repeat 0 0;
+}
+.submitForm:hover {
+  background-position: 32 0;
 }
 .right {
   text-align: right!important;
