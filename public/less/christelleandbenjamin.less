@@ -1,7 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Anaheim);
+body{
+	font-family: 'Anaheim';
+	line-height: 1.2em;
+}
 .navbar {
 	background:url('../img/bck_header.png') repeat;
 	height:108px;
-	.container {
+	.container-fluid {
 		background:none;
 	}
 	.navbar-inner {
@@ -13,7 +18,7 @@
 		ul.nav {
 			margin:0;
 			li > a {
-				padding: 15px 15px 10px;
+				padding: 15px 10px 15px;
 				line-height: 65px;
 			}
 			li.active a,li:hover a {
@@ -23,24 +28,55 @@
 	}
 }
 
-.container {
+.container-fluid {
 	background:url('../img/bck-general.jpg') repeat;
 }
 
-.container.white {
+.container-fluid.white {
 	background:url('../img/bck-zone-blanche.jpg') repeat;
 }
-.topPhoto {
-	margin:auto;
-	text-align: center;
+
+p {
+	text-align: justify;
+}
+.btn{
+	height:31px;width:32px;background:url(../img/form_btn.jpg)no-repeat 0 0!important;
+}
+.right {
+	text-align: right!important;
+}
+.guillemet{
+	float: left;
+	margin-top: -14px;
+}
+.photo {
+	margin:auto!important;
+	text-align: center!important;
 }
 .etiquette {
 	text-align: center;
 	img {width:100%;}
 }
 .temoins, .lieux {
-	p {text-align: center}
+	
 }
+
 .presentation {
 	text-align: center;
+}
+a{
+	color: #f9847a;
+	text-decoration:none;
+	margin-top:10px;
+	&:hover{color: #f9847a;}
+}
+h3{
+	padding: 0;
+	margin: 0;
+	font-size: 1.3em;
+	line-height: 1.35em;
+	font-weight: normal;
+}
+.small p{
+	line-height: 1.15em!important;
 }

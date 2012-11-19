@@ -1,2 +1,81 @@
-.navbar{background:url('../img/bck_header.png') repeat;height:108px}.navbar .container{background:0}.navbar .navbar-inner{background:0;-webkit-box-shadow:none;box-shadow:none;border:0}.navbar .navbar-inner ul.nav{margin:0}.navbar .navbar-inner ul.nav li>a{padding:15px 15px 10px;line-height:65px}.navbar .navbar-inner ul.nav li.active a,.navbar .navbar-inner ul.nav li:hover a{background:#f9c7c2}.container{background:url('../img/bck-general.jpg') repeat}.container.white{background:url('../img/bck-zone-blanche.jpg') repeat}.topPhoto{margin:auto;text-align:center}.etiquette{text-align:center}.etiquette img{width:100%}.temoins p,.lieux p{text-align:center}.presentation{text-align:center}
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+@import url(http://fonts.googleapis.com/css?family=Anaheim);
+body {
+  font-family: 'Anaheim';
+  line-height: 1.2em;
+}
+.navbar {
+  background: url('../img/bck_header.png') repeat;
+  height: 108px;
+}
+.navbar .container-fluid {
+  background: none;
+}
+.navbar .navbar-inner {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+.navbar .navbar-inner ul.nav {
+  margin: 0;
+}
+.navbar .navbar-inner ul.nav li > a {
+  padding: 15px 10px 15px;
+  line-height: 65px;
+}
+.navbar .navbar-inner ul.nav li.active a,
+.navbar .navbar-inner ul.nav li:hover a {
+  background: #f9c7c2;
+}
+.container-fluid {
+  background: url('../img/bck-general.jpg') repeat;
+}
+.container-fluid.white {
+  background: url('../img/bck-zone-blanche.jpg') repeat;
+}
+p {
+  text-align: justify;
+}
+.btn {
+  height: 31px;
+  width: 32px;
+  background: url(../img/form_btn.jpg) no-repeat 0 0 !important;
+}
+.right {
+  text-align: right!important;
+}
+.guillemet {
+  float: left;
+  margin-top: -14px;
+}
+.photo {
+  margin: auto!important;
+  text-align: center!important;
+}
+.etiquette {
+  text-align: center;
+}
+.etiquette img {
+  width: 100%;
+}
+.presentation {
+  text-align: center;
+}
+a {
+  color: #f9847a;
+  text-decoration: none;
+  margin-top: 10px;
+}
+a:hover {
+  color: #f9847a;
+}
+h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 1.35em;
+  font-weight: normal;
+}
+.small p {
+  line-height: 1.15em!important;
+}
