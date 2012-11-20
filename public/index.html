@@ -34,6 +34,11 @@
     ================================================== -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
+        <a class="btn btn-navbar navbar-wrapper" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
         <div class="container">
           <div class="nav-collapse collapse">
             <ul class="nav">
@@ -59,13 +64,28 @@
                 <a href="#voyage">Voyage de nodes</a>
               </li>
               <li class="">
-                <a href="#contact">Contact</a>
+                <a data-toggle="modal" data-target="#formulaire-contact">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+
+<!-- Formulaire de contact -->
+<div id="formulaire-contact" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn">Annuler</button>
+    <button class="btn">Envoyer</button>
+  </div>
+</div>
 
 <div class="container-fluid">
     <div class="row-fluid">
@@ -141,7 +161,12 @@
                 <img src="img/perso_trait.png" />
             </p>
             <p><img src="img/guillemets_rose.png" class="guillemet" /> Mon petit frère et meilleur ami...
-Rencontre à sa naissance, coup de foudre avec ce petit roux. Une enfance fusionnelle à jouer au Lego et à Ken & Barbie. L’adolescence est un passage un plus tendu. Il m’obligeait à regarder Téléfoot le dimanche matin et les conflits étaient fréquents. Devenus adulte, nous devenons inséparables, il est mon confident, on se soutient, se conseille et on se protège... Mon départ, une séparation qui a été très dure pour tous les deux mais aujourd’hui je suis heureuse car il comprend mon choix. Merci beaucoup Tom pour ton amour, ton humour et pour ton soutien au quotidien.</p>
+Rencontre à sa naissance, coup de foudre avec ce petit roux. Une enfance fusionnelle à jouer au Lego et à Ken & Barbie. L’adolescence est un passage un plus tendu. Il m’obligeait à regarder Téléfoot le dimanche matin et les conflits étaient fréquents. Devenus adulte, nous devenons inséparables, il est mon confident, on se soutient, se conseille et on se protège...</p>
+            <p id="suite-texte-thomas" class="collapse">Mon départ, une séparation qui a été très dure pour tous les deux mais aujourd’hui je suis heureuse car il comprend mon choix. Merci beaucoup Tom pour ton amour, ton humour et pour ton soutien au quotidien.</p>
+            <p class="option">
+                <span class="enveloppe"></span>
+                <a class="expand expand-rose" data-toggle="collapse" data-target="#suite-texte-thomas"></a>
+            </p>
 
         </div>
         <div class="span4 temoins">
@@ -150,11 +175,18 @@ Rencontre à sa naissance, coup de foudre avec ce petit roux. Une enfance fusion
                 <img src="img/nom_anneso.png" /><br/>
                 <img src="img/perso_trait.png" />
             </p>
-            <p><img src="img/guillemets_rose.png" class="guillemet" /> Une amie à travers les continents.
-Nous travaillions toutes les 2 chez Rueducommerce.com (rdc) dans le même département. Pendant quelques mois on se croisait. Ensuite arrivent les soirées rdc, les déjeuners ensemble et finalement une grande amitié est née. De nombreux souvenirs seront à jamais gravés dans ma mémoire: nos soirées et nos week-ends filles, nos restos en couple, votre venue à Montréal et toutes nos confessions de girls avec en prime les scoops parisiens!
+            <div>
+                <p><img src="img/guillemets_rose.png" class="guillemet" /> Une amie à travers les continents.
+Nous travaillions toutes les 2 chez Rueducommerce.com (rdc) dans le même département. Pendant quelques mois on se croisait. Ensuite arrivent les soirées rdc, les déjeuners ensemble et finalement une grande amitié est née. De nombreux souvenirs seront à jamais gravés dans ma mémoire: nos soirées et nos week-ends filles, nos restos en couple, votre venue à Montréal et toutes nos confessions de girls avec en prime les scoops parisiens!</p>
+<p id="suite-texte-anneso" class="collapse">
 Malgré les kilomètres qui nous séparent notre amitié est intacte et toujours aussi forte.
 Anne-so est une amie attentionnée, à l’écoute, de très bons conseils et dynamique. C’est aussi une femme avec un grand coeur, qui est toujours disponible!
 Merci ma belle pour ton amitié et ta présence au quotidien malgré la distance qui nous sépare.</p>
+            <p class="option">
+                <span class="enveloppe"></span>
+                <a class="expand expand-rose" data-toggle="collapse" data-target="#suite-texte-anneso"></a>
+            </p>
+            </div>
         </div>
         <div class="span4 temoins">
             <p class="photo">
@@ -162,11 +194,18 @@ Merci ma belle pour ton amitié et ta présence au quotidien malgré la distance
                 <img src="img/nom_cecile.png" /><br/>
                 <img src="img/perso_trait.png" />
             </p>
-            <p><img src="img/guillemets_rose.png" class="guillemet" /> Une amie et voisine Marseillaise à Montréal
+            <p>
+                <img src="img/guillemets_rose.png" class="guillemet" /> Une amie et voisine Marseillaise à Montréal
 Nous nous sommes rencontrées un soir enneigé de décembre 2010 à La Barraca, notre bar du coin!
-Je reviens, visa en poche, à Montréal en janvier 2011. Deux mois sans ma moitié, sans travail, j’apréhendais le temps long. Mais la tornade Cécile se charge de tout! Deux mois d’intégration intense avec un programme très chargé: soirées, sorties, brunch, apéro, activités sportives et culturelles, les we en châlet ou à NYC... Que l’aventure continue toujours autant, c’est que du bonheur!
-Cécile est une amie très présente, investie, généreuse, dynamique et qui aime organiser.
+Je reviens, visa en poche, à Montréal en janvier 2011. Deux mois sans ma moitié, sans travail, j’apréhendais le temps long. Mais la tornade Cécile se charge de tout! Deux mois d’intégration intense avec un programme très chargé: soirées, sorties, brunch, apéro, activités sportives et culturelles, les we en châlet ou à NYC...
+            </p>
+            <p id="suite-texte-cecile" class="collapse">
+ Que l’aventure continue toujours autant, c’est que du bonheur! Cécile est une amie très présente, investie, généreuse, dynamique et qui aime organiser.
 Elle a aussi une grande qualité : savoir déléguer, elle repète souvent : Bien manager c’est savoir déléguer!!! Merci ma Céc pour ta joie de vivre, ta motivation de tous les jours, et ton investissement.</p>
+            <p class="option">
+                <span class="enveloppe"></span>
+                <a class="expand expand-rose" data-toggle="collapse" data-target="#suite-texte-cecile"></a>
+            </p>
         </div>
     </div>
     <div class="row-fluid">
@@ -253,7 +292,6 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
     </div>
 </div>
 <div class="container-fluid" id="hebergement">
-
     <div class="row-fluid">
         <div class="span12 etiquette">
             <p><img src="img/etiquette_hebergement.png" /></p>
@@ -371,7 +409,7 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
                 <input class="input-xxlarge" type="text" placeholder="Noms et prénoms des invités">
                 <input class="input-large" type="text" placeholder="Nombre de personnes au diner ?">
                 <input class="input-large" type="text" placeholder="Nombre de personnes au brunch ?">
-                <button type="submit" class="btn photo">Valider</button>
+                <a class="submitForm"></a>
             </p>
         </div>
     </div>
@@ -399,16 +437,14 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
         </div>
     </div>
     <div class="row-fluid">
-        <div class="span6">
+        <div class="span12">
+            <p class="photo">
                 <input class="input-xxlarge" type="text" placeholder="Noms et prénoms des invités">
-        </div>
-        <div class="span3">
                 <input class="input-large" type="text" placeholder="Nombre de personnes au diner ?">
-        </div>
-        <div class="span2">
                 <input class="input-large" type="text" placeholder="Nombre de personnes au brunch ?">
+                <a class="submitForm"></a>
+            </p>
         </div>
-        <div class="span1 submitForm"></div>
     </div>
     <div class="row-fluid">
         <div class="span12">
@@ -444,6 +480,9 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-scrollspy.js"></script>
 <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
+<script type="text/javascript" src="js/bootstrap-transition.js"></script>
+<script type="text/javascript" src="js/bootstrap-modal.js"></script>
 <script type="text/javascript">
     $('a[href^="#"]').click(function(){  
         var the_id = $(this).attr("href");  
@@ -451,6 +490,14 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             scrollTop:$(the_id).offset().top-100  
         }, 'slow');  
         return false;  
+    }); 
+
+    $(".expand").click(function(event){ 
+        if($(event.currentTarget).css('backgroundPositionX')=='0px'){
+            $(event.currentTarget).css('backgroundPositionX', '-12px');
+        }else{
+            $(event.currentTarget).css('backgroundPositionX', '0px');
+        }
     }); 
 </script>
   </body>

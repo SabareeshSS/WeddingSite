@@ -2,14 +2,13 @@
 body{
 	font-family: 'Anaheim';
 	line-height: 1.2em;
-	padding:0;
-	margin:auto;
 }
 .navbar {
 	background:url('../img/bck_header.png') repeat;
 	height:108px;
-	.container-fluid {
+	.container {
 		background:none;
+		height:108px;
 	}
 	.navbar-inner {
 		background:none;
@@ -31,13 +30,7 @@ body{
 }
 
 .container-fluid {
-	margin:auto;
 	background:url('../img/bck-general.jpg') repeat;
-	padding: 20px;
-	& > * {
-		max-width: 1200px;
-		margin:auto;
-	}
 }
 
 .container-fluid.white {
@@ -48,9 +41,15 @@ p {
 	text-align: justify;
 }
 .submitForm{
-	height:31px;width:32px!important;background:url(../img/form_btn.png)no-repeat 0 0;
+	height:31px;
+	width:32px;
+	padding-top: 5px!important;
+	cursor: pointer;
+	background:url(../img/form_btn.png)no-repeat 0 0;
+	display: inline-block;
+	text-decoration: none;
 	&:hover{
-		background-position: 32 0;
+		background-position: -33px 0;
 	}
 }
 .right {
@@ -68,10 +67,36 @@ p {
 	text-align: center;
 	img {width:100%;}
 }
-.temoins, .lieux {
-	
-}
 
+.expand{
+	width: 11px;
+	height: 7px;
+	display: block;
+	cursor: pointer;
+	&.expand-rose{
+		background: url(../img/fleche_rose.png)no-repeat 0 0;
+	}
+	&.expand-verte{
+		background: url(../img/fleche_rose.png)no-repeat 0 0;
+	}
+}
+.enveloppe{
+	cursor: pointer;
+	margin-top: -2px;
+	width: 14px;
+	height: 11px;
+	display: inline;
+	float: right;
+	background: url(../img/enveloppe.png)no-repeat 0 0;
+}
+.temoins{
+	.collapse{margin-top: -9px;}
+	.option {
+		line-height: 14px;
+		margin: 0;
+		margin-top:-5px;
+	}
+}
 .presentation {
 	text-align: center;
 }
