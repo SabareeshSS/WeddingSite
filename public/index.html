@@ -64,28 +64,13 @@
                 <a href="#voyage">Voyage de nodes</a>
               </li>
               <li class="">
-                <a data-toggle="modal" data-target="#formulaire-contact">Contact</a>
+                <a href="#formulaire-contact">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-
-<!-- Formulaire de contact -->
-<div id="formulaire-contact" class="modal hide fade">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn">Annuler</button>
-    <button class="btn">Envoyer</button>
-  </div>
-</div>
 
 <div class="container-fluid">
     <div class="row-fluid">
@@ -473,8 +458,31 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
         </div>
     </div>
 </div>
-    <footer class="footer">
-    </footer>
+<footer class="footer"></footer>
+
+
+<!-- Formulaire de contact -->
+<div id="formulaire-contact" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Écrire à Christelle et Benjamin</h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="row-fluid">
+            <div class="span12">
+                <p class="photo">
+                    <input class="span12" type="text" placeholder="Emaill"><br/>
+                    <textarea rows="5"class="span12" placeholder="Message"></textarea>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <a class="submitForm"></a>
+    </div>
+</div>
 
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -485,12 +493,16 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
 <script type="text/javascript" src="js/bootstrap-modal.js"></script>
 <script type="text/javascript">
     $('a[href^="#"]').click(function(){  
-        var the_id = $(this).attr("href");  
-        $('html, body').animate({  
-            scrollTop:$(the_id).offset().top-100  
-        }, 'slow');  
+        var the_id = $(this).attr("href");
+        if(the_id == "#formulaire-contact"){
+            $('#formulaire-contact').modal();
+        }else{
+            $('html, body').animate({  
+                scrollTop:$(the_id).offset().top-100  
+            }, 'slow'); 
+        }
         return false;  
-    }); 
+    });
 
     $(".expand").click(function(event){ 
         if($(event.currentTarget).css('backgroundPositionX')=='0px'){
