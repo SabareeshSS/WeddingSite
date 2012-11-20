@@ -10,7 +10,6 @@ body {
 }
 .navbar .container {
   background: none;
-  padding: 20px;
 }
 .navbar .btn-navbar {
   margin-right: 30px;
@@ -85,7 +84,7 @@ p {
   background: url(../img/fleche_rose.png) no-repeat 0 0;
 }
 .expand.expand-verte {
-  background: url(../img/fleche_rose.png) no-repeat 0 0;
+  background: url(../img/fleche_verte.png) no-repeat 0 0;
 }
 .enveloppe {
   cursor: pointer;
