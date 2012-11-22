@@ -1,9 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Anaheim);
 body{
 	font-family: 'Anaheim';
-	line-height: 1.2em;
+	line-height: 12px;
 	padding: 0;
 	margin: auto;
+	line-height: 20px;
+	color: #797979;
 }
 .navbar {
 	background:url('../img/bck_header.png') repeat;
@@ -34,7 +36,7 @@ body{
 
 .container-fluid {
 	background:url('../img/bck-general.jpg') repeat;
-	padding:10px;
+	padding:30px;
 }
 .container-fluid  > * {  	
 	max-width: 1200px;
@@ -48,7 +50,10 @@ body{
 p {
 	text-align: justify;
 }
-.submitForm{
+input {
+	margin: 0;
+}
+.btnSubmit{
 	height:31px;
 	width:32px;
 	padding-top: 5px!important;
@@ -56,12 +61,17 @@ p {
 	background:url(../img/form_btn.png)no-repeat 0 0;
 	display: inline-block;
 	text-decoration: none;
+	vertical-align: middle;
+	margin-top: -3px;
 	&:hover{
 		background-position: -33px 0;
 	}
 }
 .right {
 	text-align: right!important;
+}
+.left {
+	text-align: left!important;
 }
 .guillemet{
 	float: left;
@@ -73,19 +83,21 @@ p {
 }
 .etiquette {
 	text-align: center;
-	img {width:100%;}
+	margin: 25px 0;
+	background: url(../img/etiquette-ribbon-trait.png) no-repeat 50% 50%;
+	width: 100%;
+	img {min-width: 236px;min-height: 31px;}
 }
 
 .expand{
 	width: 11px;
 	height: 7px;
-	display: block;
 	cursor: pointer;
 	&.expand-rose{
-		background: url(../img/fleche_rose.png)no-repeat 0 0;
+		color: #f9847a;
 	}
 	&.expand-verte{
-		background: url(../img/fleche_verte.png)no-repeat 0 0;
+		color: #93d250;
 	}
 }
 .enveloppe{
@@ -104,23 +116,60 @@ p {
 		margin: 0;
 		margin-top:-5px;
 	}
+	.header{
+		margin-bottom: 15px!important;
+		margin-top: 10px!important;
+	}
 }
+
+
+.lieux {
+	margin-bottom: 15px;
+	img {margin: 5px;}
+	a {
+		color: #797979;
+		text-decoration: underline;
+		&.verte:hover{color: #93d250;}
+	}
+}
+
+.marge {
+	margin: 20px 0;
+}
+
+.perso-trait {
+	margin-top: 5px!important;
+	margin-bottom: 5px!important;
+}
+
 .presentation {
 	text-align: center;
+	line-height: 24px;
+	
+	p {
+		margin-top:10px;
+	}
+	
+	img {
+		margin:5px;
+	}
 }
-a{
+
+a {
 	color: #f9847a;
 	text-decoration:none;
 	margin-top:10px;
 	&:hover{color: #f9847a;}
 }
-h3{
+
+h3 {
 	padding: 0;
 	margin: 0;
 	font-size: 1.3em;
 	line-height: 1.35em;
 	font-weight: normal;
 }
-.small p{
+
+.small p {
 	line-height: 1.15em!important;
 }
