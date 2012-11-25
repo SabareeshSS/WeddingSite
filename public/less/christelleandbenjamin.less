@@ -8,10 +8,8 @@ body{
 	color: #797979;
 }
 .navbar {
-	background:url('../img/bck_header.png') repeat;
-	.container {
-		background:none;
-	}
+	background:url('../img/bck_header.png') fixed repeat-x;
+	z-index: 1000;
 	.btn-navbar {
 		margin-right: 30px;
 	}
@@ -22,21 +20,35 @@ body{
 		border:none;
 
 		ul.nav {
-			margin:0;
+			margin: 0 10px 0 100px;
 			li > a {
 				line-height: 64px;
 				margin:0;
+				color:#F9847A;
 			}
 			li.active a,li:hover a {
 				background:#f9c7c2;
+				color:#000;
 			}
+		}
+	}
+}
+@media (max-width: 979px) {
+	.navbar-fixed-top {
+		margin-bottom: 0;
+		background:url('../img/bck-general.jpg') repeat;
+		ul {
+			margin: 0 10px 0 10px!important;
+		}
+		li {
+			width: 99%;
 		}
 	}
 }
 
 .container-fluid {
 	background:url('../img/bck-general.jpg') repeat;
-	padding:30px;
+	padding:20px;
 }
 .container-fluid  > * {  	
 	max-width: 1200px;
@@ -190,3 +202,5 @@ h3 {
 .small p {
 	line-height: 1.15em!important;
 }
+
+.palette {margin-top:10px;}
