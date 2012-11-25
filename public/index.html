@@ -426,19 +426,26 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             <p class="photo"><img src="img/form_hachures.png" /></p>
         </div>
     </div>
-    <div class="row-fluid">
+    <div class="row-fluid max900">
         <div class="span12">
             <form action="/rsvp" method="POST">
-                <p class="photo">
-                    <input class="input-xxlarge" type="text" name="names" placeholder="Noms et prénoms des invités"/>
-                    <input class="input-large" type="text" name="diner" placeholder="Nombre de personnes au diner ?"/>
-                    <input class="input-large" type="text" name="brunch" placeholder="Nombre de personnes au brunch ?"/>
+                <div class="span5">
+                    <input type="text" name="names" placeholder="Noms et prénoms des invités"/>
+                </div>
+                <div class="span3">
+                    <input type="text" name="diner" placeholder="Nombre de personnes au diner ?"/>
+                </div>
+                <div class="span3">
+                    <input type="text" name="brunch" placeholder="Nombre de personnes au brunch ?"/>
+                </div>
+                <div class="span1 right">
                     <button type="submit" class="btnSubmit"></button>
-                </p>
+                </div>
                 <p class="feedback"><p/>
             </form>
         </div>
     </div>
+
     <div class="row-fluid">
         <div class="span12">
             <p class="photo"><img src="img/form_hachures.png" /></p>
@@ -462,14 +469,18 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             <p class="photo"><img src="img/form_hachures.png" /></p>
         </div>
     </div>
-    <div class="row-fluid">
+    <div class="row-fluid max900">
         <div class="span12">
             <form action="/music" method="POST">
-                <p class="photo">
-                    <input class="input-xlarge" type="text" placeholder="Artiste/groupe" name="band">
-                    <input class="input-xlarge" type="text" name="title" placeholder="Titre">
+                <div class="span6">
+                    <input class="inputMoyen" type="text" placeholder="Artiste/groupe" name="band">
+                </div>
+                <div class="span5">
+                    <input class="inputMoyen" type="text" name="title" placeholder="Titre">
+                </div>
+                <div class="span1 right">
                     <button type="submit" class="btnSubmit"></button>
-                </p>
+                </div>
                 <p class="feedback"><p/>
             </form>
         </div>
@@ -512,14 +523,14 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
     </div>
     <div class="modal-body">
         <p class="photo">
-            <input type="text" class="input-xlarge" name="email" placeholder="Email"><br/>
-            <textarea rows="5" class="input-xlarge" name="contenu" placeholder="Message"></textarea>
+            <input type="text" class="input-xxlarge" name="email" placeholder="Email"><br/>
+            <textarea rows="5" class="input-xxlarge" name="contenu" placeholder="Message"></textarea>
         </p>
     </div>
     <div class="modal-footer">
         <button type="submit" class="btnSubmit"></button>        
     </div>
-    <p class="feedback photo"><p/>
+    <p class="feedback"><p/>
 </form>
 
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>

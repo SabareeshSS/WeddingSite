@@ -159,6 +159,15 @@ input {
 .lieux a.verte:hover {
   color: #93d250;
 }
+#rvsp .max,
+#musique .max {
+  max-width: 900px;
+}
+input {
+  margin-bottom: 0;
+  margin-left: 0;
+  width: 100%;
+}
 .marge {
   margin: 20px 0;
 }
