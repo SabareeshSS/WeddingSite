@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Anaheim);
+.right {
+  text-align: right!important;
+}
 body {
   font-family: 'Anaheim';
   line-height: 12px;
@@ -44,6 +47,9 @@ body {
   .navbar-fixed-top li {
     width: 99%;
   }
+  .palette {
+    text-align: center!important;
+  }
 }
 .container-fluid {
   background: url('../img/bck-general.jpg') repeat;
@@ -83,9 +89,6 @@ input {
 }
 .btnSubmit:hover {
   background-position: -33px 0;
-}
-.right {
-  text-align: right!important;
 }
 .left {
   text-align: left!important;
