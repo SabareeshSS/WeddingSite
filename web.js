@@ -1,6 +1,7 @@
 var async   = require('async');
 var express = require('express');
 var util    = require('util');
+var nodemailer = require('nodemailer');
 
 // create an express webserver
 var app = express.createServer(
@@ -8,14 +9,105 @@ var app = express.createServer(
   express.static(__dirname + '/public'),
   express.bodyParser(),
   express.cookieParser(),
-  // set this to a secret value to encrypt session cookies
-  express.session({ secret: process.env.SESSION_SECRET || 'secret123' }),
-  require('faceplate').middleware({
-    app_id: process.env.FACEBOOK_APP_ID,
-    secret: process.env.FACEBOOK_SECRET,
-    scope:  'user_likes,user_photos,user_photo_video_tags'
-  })
+  express.session({ secret: process.env.SESSION_SECRET || 'secret123' })
 );
+
+var sendMail = function(mailOptions, cb) {
+  mailOptions.from = "Mariage <christelleandbenjamin@gmail.com>";
+  mailOptions.to = "ADRESSE";
+
+  var transport = nodemailer.createTransport("SMTP", {
+      service: "Gmail",
+      auth: {
+          user: "user",
+          pass: "pass"
+      }
+  });
+  transport.sendMail(mailOptions, function(error, response){
+        if(error){
+            console.log(error);
+            cb({success:false,error:error});
+        }else{
+            console.log("Message sent: " + response.message);
+            cb({success:true,mailOptions:mailOptions}); 
+        }
+    });
+  transport.close(); // close the pool
+  console.log("Transport closed");
+
+};
+
+app.post('/rsvp', function(req, res) {
+  console.log("new rsvp");
+  var names = req.body.names,
+      brunch = req.body.brunch,
+      diner = req.body.diner;
+
+  console.log("Names : "+names+" diner "+diner+" et brunch "+brunch);
+
+  if(names && brunch && diner) {
+    var mailOptions = {
+        subject: "RVSP", // Subject line
+        html: "<h3>Hey !</h3><p>Nouvel invité pour le mariage.</p><p><ul><li>Name : "+names+"</li><li>Nb de personnes au diner : "+diner+"</li><li>Nb de personnes au brunch : "+brunch+"</li></ul></p><p>The registration happened on : "+new Date()+" from IP address "+req.socket.remoteAddress+"."
+    };
+    sendMail(mailOptions, function(data) {
+      res.send(data);
+    });
+  }
+  else {
+    res.send({success:false,error:"missing"});
+  }
+});
+
+app.post('/music', function(req, res) {
+  console.log("new music");
+  
+  var band = req.body.band,
+      title = req.body.title;
+
+  console.log("Music : ");
+
+  if(band && title) {
+    var mailOptions = {
+        subject: "Musique", // Subject line
+        html: "<h3>Hey !</h3><p>Nouvelle suggestion de musique pour le mariage.</p><p><ul><li>Groupe/Artiste : "+band+"</li><li>Titre : "+title+"</li></ul></p><p>La suggestion a été envoyée : "+new Date()+" from IP address "+req.socket.remoteAddress+"."
+    };
+    sendMail(mailOptions, function(data) {
+      res.send(data);
+    });
+  }
+  else {
+    res.send({success:false,error:"missing"});
+  }
+});
+
+app.post('/contact', function(req, res) {
+  console.log("new message");
+  
+  var email = req.body.email,
+      message = req.body.contenu;
+
+  console.log("Music : ");
+
+  if(email && message) {
+    var mailOptions = {
+        subject: "Message depuis le site du mariage", // Subject line
+        html: "<h3>Hey !</h3><p>Nouveau message depuis le site du mariage.</p><p><ul><li>Email : "+email+"</li><li>Message : "+message+"</li></ul></p><p>Le message a été envoyé le : "+new Date()+" from IP address "+req.socket.remoteAddress+"."
+    };
+    sendMail(mailOptions, function(data) {
+      res.send(data);
+    });
+  }
+  else {
+    res.send({success:false,error:"missing"});
+  }
+});
+
+app.get('/', function(req, res) {
+  res.sendfile('public/index.html'); 
+});
+
+
 
 // listen to the PORT given to us in the environment
 var port = process.env.PORT || 3000;
@@ -24,80 +116,3 @@ app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
-app.dynamicHelpers({
-  'host': function(req, res) {
-    return req.headers['host'];
-  },
-  'scheme': function(req, res) {
-    req.headers['x-forwarded-proto'] || 'http'
-  },
-  'url': function(req, res) {
-    return function(path) {
-      return app.dynamicViewHelpers.scheme(req, res) + app.dynamicViewHelpers.url_no_scheme(path);
-    }
-  },
-  'url_no_scheme': function(req, res) {
-    return function(path) {
-      return '://' + app.dynamicViewHelpers.host(req, res) + path;
-    }
-  },
-});
-
-function render_page(req, res) {
-  req.facebook.app(function(app) {
-    req.facebook.me(function(user) {
-      res.render('index.ejs', {
-        layout:    false,
-        req:       req,
-        app:       app,
-        user:      user
-      });
-    });
-  });
-}
-
-function handle_facebook_request(req, res) {
-
-  // if the user is logged in
-  if (req.facebook.token) {
-
-    async.parallel([
-      function(cb) {
-        // query 4 friends and send them to the socket for this socket id
-        req.facebook.get('/me/friends', { limit: 4 }, function(friends) {
-          req.friends = friends;
-          cb();
-        });
-      },
-      function(cb) {
-        // query 16 photos and send them to the socket for this socket id
-        req.facebook.get('/me/photos', { limit: 16 }, function(photos) {
-          req.photos = photos;
-          cb();
-        });
-      },
-      function(cb) {
-        // query 4 likes and send them to the socket for this socket id
-        req.facebook.get('/me/likes', { limit: 4 }, function(likes) {
-          req.likes = likes;
-          cb();
-        });
-      },
-      function(cb) {
-        // use fql to get a list of my friends that are using this app
-        req.facebook.fql('SELECT uid, name, is_app_user, pic_square FROM user WHERE uid in (SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1', function(result) {
-          req.friends_using_app = result;
-          cb();
-        });
-      }
-    ], function() {
-      render_page(req, res);
-    });
-
-  } else {
-    render_page(req, res);
-  }
-}
-
-app.get('/', handle_facebook_request);
-app.post('/', handle_facebook_request);
