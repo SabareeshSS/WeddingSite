@@ -91,7 +91,7 @@
                 <img src="img/nom_chris.png" /><br/>
                 <img src="img/maries_hachures.png"/>
             </p>
-            <p>
+            <p class="histoire-maries">
                 Notre histoire a commencé au Séminaire de jeunes à Walbourg. Le 8 novembre 2001, à la pause du soir, nous avons échangé un bisou furtif. Rappelons que nous étions à l’internat et il était interdit d’y exposer sa vie privée ! Un comble, on y passait toute notre semaine. Notre histoire devait rester discrète et c’était l’année du bac, donc pas trop de conneries...<br/>
                 Après le bac, deux années rythmées par nos études, on se retrouvait le week-end chez nos parents.S’en est suivi trois années d’aller-retour Lille-Grenoble une fois par mois et des retrouvailles en Alsace pendant les vacances scolaires. L’amour à distance pas facile à vivre, je vous le confirme.<br/>
                 Fin des études, notre diplôme en poche, la vraie vie à 2 peut enfin commencer. Après des mois de recherches intenses pour trouver “une job” (petit clin d’oeil à mes amis québécois!)...On pose nos valises à Paris pour 3 années intenses d’amour et d’eau de vie…et de shopping (pour moi!!!)
@@ -105,7 +105,7 @@
                 <img src="img/nom_ebn.png" /><br/>
                 <img src="img/maries_hachures.png"/>
             </p>
-            <p>
+            <p class="histoire-maries">
                 Voilà bientôt onze ans que je partage ma vie avec la femme la plus extraordinaire.<br/>
                 Petit retour en arrière, enfin saut dans le temps pour revenir au mois de novembre 2001 pour vous conter la genèse de notre Amour.<br/>
                 L’histoire se déroule à Walbourg, dans un internat à forte influence religieuse où il est interdit tout simplement d’effleurer les lèvres d’une de ses camarades.<br/>
@@ -429,11 +429,12 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
         <div class="span12">
             <form action="/rsvp" method="POST">
                 <p class="photo">
-                    <input class="input-xxlarge" type="text" name="names" placeholder="Noms et prénoms des invités">
-                    <input class="input-large" type="text" name="diner" placeholder="Nombre de personnes au diner ?">
-                    <input class="input-large" type="text" name="brunch" placeholder="Nombre de personnes au brunch ?">
-                    <input type="submit" class="btnSubmit" />
+                    <input class="input-xxlarge" type="text" name="names" placeholder="Noms et prénoms des invités"/>
+                    <input class="input-large" type="text" name="diner" placeholder="Nombre de personnes au diner ?"/>
+                    <input class="input-large" type="text" name="brunch" placeholder="Nombre de personnes au brunch ?"/>
+                    <button type="submit" class="btnSubmit"></button>
                 </p>
+                <p class="feedback"><p/>
             </form>
         </div>
     </div>
@@ -466,8 +467,9 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
                 <p class="photo">
                     <input class="input-xlarge" type="text" placeholder="Artiste/groupe" name="band">
                     <input class="input-xlarge" type="text" name="title" placeholder="Titre">
-                    <input type="submit" class="btnSubmit"></a>
+                    <button type="submit" class="btnSubmit"></button>
                 </p>
+                <p class="feedback"><p/>
             </form>
         </div>
     </div>
@@ -502,30 +504,22 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
 
 
 <!-- Formulaire de contact -->
-<div id="formulaire-contact" class="modal hide fade">
+<form id="formulaire-contact" class="modal hide fade" method="post" action="/contact">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">Écrire à Christelle et Benjamin</h3>
     </div>
     <div class="modal-body">
-
-        <div class="row-fluid">
-            <div class="span12">
-                <form action="/contact" method="POST">
-                    <p class="photo">
-                        <input class="span12" type="text" name="email" placeholder="Email"><br/>
-                        <textarea rows="5"class="span12" name="contenu" placeholder="Message"></textarea>
-                    </p>
-                    <input type="submit" class="submit"/>
-                </form>
-            </div>
-        </div>
-
+        <p class="photo">
+            <input type="text" class="input-xlarge" name="email" placeholder="Email"><br/>
+            <textarea rows="5" class="input-xlarge" name="contenu" placeholder="Message"></textarea>
+        </p>
     </div>
     <div class="modal-footer">
-        <a class="submitForm"></a>
+        <button type="submit" class="btnSubmit"></button>        
     </div>
-</div>
+    <p class="feedback photo"><p/>
+</form>
 
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -553,7 +547,58 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
         }else{
             $(event.currentTarget).html('Réduire');
         }
-    }); 
+    });
+
+    $('form').submit(function(event) {
+        event.preventDefault();
+        var feedback = $(this).children(".feedback");
+        feedback.removeClass('success');
+        feedback.html('Envoi en cours, patientez svp.');
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(), 
+            dataType: 'json',
+            success: function(data) {
+                if(data.success) {
+                    //$('#formulaire-contact').modal('hide');
+                    feedback.removeClass('error');
+                    feedback.removeClass('success');
+                    feedback.html('Message bien envoyé');
+                    feedback.addClass('success');
+                } else {
+                    feedback.removeClass('error');
+                    feedback.removeClass('success');
+                    feedback.html('Une erreur est survenue.');
+                    feedback.addClass('error');
+                }
+            },
+            error: function(data) {
+                //$('#formulaire-contact').modal('hide');
+                feedback.removeClass('error');
+                feedback.removeClass('success');
+                feedback.html('Une erreur est survenue.');
+                feedback.addClass('error');
+            } 
+        });
+        return false;
+    });
+
+    var verificationMail = function(mail){
+            
+        var verif   = /^[a-zA-Z0-9_-_.]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/
+        
+        if (verif.exec(mail)){
+            
+            return true;
+            
+        }else{
+            
+            return false;
+            
+        }           
+    };
 </script>
   </body>
 </html>

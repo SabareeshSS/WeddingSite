@@ -53,10 +53,17 @@ p {
 input {
 	margin: 0;
 }
+
+.success { color: green;}
+.error { color: red;}
+
 .btnSubmit{
+	border: none;
+	padding:0;
+	margin:0;
 	height:31px;
 	width:32px;
-	padding-top: 5px!important;
+	margin-top: -10px!important;
 	cursor: pointer;
 	background:url(../img/form_btn.png)no-repeat 0 0;
 	display: inline-block;
@@ -81,6 +88,14 @@ input {
 	margin:auto!important;
 	text-align: center!important;
 }
+
+#maries{
+	.histoire-maries{
+		max-width: 421px;
+		margin: auto;
+	}
+}
+
 .etiquette {
 	text-align: center;
 	margin-top:15px;
@@ -91,36 +106,36 @@ input {
 	p{margin:0;padding:0;}
 }
 
-.expand{
-	width: 11px;
-	height: 7px;
-	cursor: pointer;
-	&.expand-rose{
-		color: #f9847a;
-	}
-	&.expand-verte{
-		color: #93d250;
-	}
-}
-.enveloppe{
-	cursor: pointer;
-	margin-top: -2px;
-	width: 14px;
-	height: 11px;
-	display: inline;
-	float: right;
-	background: url(../img/enveloppe.png)no-repeat 0 0;
-}
 .temoins{
-	.collapse{margin-top: -9px;}
-	.option {
-		line-height: 14px;
-		margin: 0;
-		margin-top:-5px;
+
+	p {
+		max-width: 260px;
+		margin: auto;
 	}
-	.header{
+	.header {
 		margin-bottom: 15px!important;
 		margin-top: 10px!important;
+	}
+
+	.expand{
+		width: 11px;
+		height: 7px;
+		cursor: pointer;
+		&.expand-rose{
+			color: #f9847a;
+		}
+		&.expand-verte{
+			color: #93d250;
+		}
+	}
+	.enveloppe{
+		cursor: pointer;
+		width: 14px;
+		height: 11px;
+		margin-top: 6px;
+		display: inline;
+		float: right;
+		background: url(../img/enveloppe.png)no-repeat 0 0;
 	}
 }
 
