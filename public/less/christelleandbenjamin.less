@@ -75,7 +75,6 @@ input {
 	margin:0;
 	height:31px;
 	width:32px;
-	margin-top: -10px!important;
 	cursor: pointer;
 	background:url(../img/form_btn.png)no-repeat 0 0;
 	display: inline-block;
@@ -96,7 +95,7 @@ input {
 	float: left;
 	margin-top: -14px;
 }
-.photo {
+.photo, .feedback {
 	margin:auto!important;
 	text-align: center!important;
 }
@@ -162,10 +161,13 @@ input {
 	}
 }
 
-#rvsp, #musique{
-	.max{
-		max-width:900px;
-	}
+
+.max900{
+	max-width:900px;
+}
+
+#musique, #rsvp{
+	.feedback{display: inline-table;margin-bottom: 0;padding-bottom:0;}
 }
 
 input{
@@ -216,3 +218,9 @@ h3 {
 }
 
 .palette {margin-top:10px;}
+
+#formulaire-contact{
+	input, textarea{
+		width:90%;
+	}
+}
