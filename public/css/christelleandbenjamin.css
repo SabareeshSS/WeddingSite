@@ -118,6 +118,9 @@ input {
   margin: 0;
   padding: 0;
 }
+.temoins-garcon {
+  margin-top: 30px;
+}
 .temoins p {
   max-width: 260px;
   margin: auto;
@@ -130,6 +133,7 @@ input {
   width: 11px;
   height: 7px;
   cursor: pointer;
+  text-shadow: 0 1px 0 #fff;
 }
 .temoins .expand.expand-rose {
   color: #f9847a;
@@ -139,12 +143,16 @@ input {
 }
 .temoins .enveloppe {
   cursor: pointer;
-  width: 14px;
-  height: 11px;
-  margin-top: 6px;
+  width: 74px;
+  height: 13px;
+  margin-top: 4px;
   display: inline;
   float: right;
-  background: url(../img/enveloppe.png) no-repeat 0 0;
+  font-size: 12px;
+  line-height: 12px;
+  color: #b1a2a1;
+  text-shadow: 0 1px 0 #fff;
+  background: url(../img/enveloppe.png) no-repeat 60px 1px;
 }
 .lieux {
   margin-bottom: 15px;
@@ -158,6 +166,10 @@ input {
 }
 .lieux a.verte:hover {
   color: #93d250;
+}
+.lieux span {
+  width: 100%;
+  background: url(../img/perso_trait_2.png) no-repeat 0px 0px;
 }
 .max900 {
   max-width: 900px;
