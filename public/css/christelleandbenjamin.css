@@ -6,6 +6,7 @@ body {
   margin: auto;
   line-height: 20px;
   color: #797979;
+  font-size: 13px;
 }
 .navbar {
   background: url('../img/bck_header.png') fixed repeat-x;
@@ -50,7 +51,7 @@ body {
   padding: 20px;
 }
 .container-fluid > * {
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
 }
 .container-fluid.white {
@@ -143,7 +144,7 @@ input {
 }
 .temoins .enveloppe {
   cursor: pointer;
-  width: 74px;
+  width: 68px;
   height: 13px;
   margin-top: 4px;
   display: inline;
@@ -152,7 +153,10 @@ input {
   line-height: 12px;
   color: #b1a2a1;
   text-shadow: 0 1px 0 #fff;
-  background: url(../img/enveloppe.png) no-repeat 60px 1px;
+  background: url(../img/enveloppe.png) no-repeat 53px 1px;
+}
+.padding-hebergement {
+  padding-left: 30px;
 }
 .lieux {
   margin-bottom: 15px;
@@ -167,12 +171,10 @@ input {
 .lieux a.verte:hover {
   color: #93d250;
 }
-.lieux span {
-  width: 100%;
-  background: url(../img/perso_trait_2.png) no-repeat 0px 0px;
-}
-.max900 {
-  max-width: 900px;
+.lieux .bg-trait2 {
+  width: 260px;
+  margin: auto;
+  background: url(../img/perso_trait_2.png) no-repeat 0px 50%;
 }
 #musique .feedback,
 #rsvp .feedback {
@@ -184,7 +186,8 @@ input {
   margin-bottom: 0;
   margin-left: 0;
   width: 100%;
-  font-size: 13px!important;
+  font-size: 12px!important;
+  font-family: 'Anaheim' !important;
 }
 .marge {
   margin: 20px 0;
@@ -217,6 +220,7 @@ h3 {
   font-size: 1.3em;
   line-height: 1.35em;
   font-weight: normal;
+  font-size: 12px;
 }
 .small p {
   line-height: 1.15em!important;
@@ -227,4 +231,6 @@ h3 {
 #formulaire-contact input,
 #formulaire-contact textarea {
   width: 90%;
+  font-size: 12px!important;
+  font-family: 'Anaheim' !important;
 }

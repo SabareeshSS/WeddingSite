@@ -160,11 +160,12 @@
             </p>
 
             <p class="option">
-                <a href="mailto:christelle@ziliko.com" class="enveloppe">Lui écrire</a>
+                <a href="mailto:" id="thomas" class="enveloppe">Lui écrire</a>
                 <a class="expand expand-rose" data-toggle="collapse" data-target="#suite-texte-thomas">Lire la suite</a>
             </p>
 
         </div>
+        
         <div class="span4 temoins">
             <p class="photo header">
                 <img src="img/photo_anneso.png" /><br/>
@@ -180,7 +181,7 @@
                 </p>
                 
                 <p class="option">
-                    <a href="mailto:christelle@ziliko.com" class="enveloppe">Lui écrire</a>
+                    <a href="mailto:" id="anneso" class="enveloppe">Lui écrire</a>
                     <a class="expand expand-rose" data-toggle="collapse" data-target="#suite-texte-anneso">Lire la suite</a>
                 </p>
             </div>
@@ -200,7 +201,7 @@
             </p>
 
             <p class="option">
-                <a href="mailto:christelle@ziliko.com" class="enveloppe">Lui écrire</a>
+                <a href="mailto:" id="cecile" class="enveloppe">Lui écrire</a>
                 <a class="expand expand-rose" data-toggle="collapse" data-target="#suite-texte-cecile">Lire la suite</a>
             </p>
         </div>
@@ -221,7 +222,7 @@
             </p>
 
             <p class="option">
-                <a href="mailto:christelle@ziliko.com" class="enveloppe">Lui écrire</a>
+                <a href="mailto:" id="jacques" class="enveloppe">Lui écrire</a>
                 <a class="expand expand-verte" data-toggle="collapse" data-target="#suite-texte-jacques">Lire la suite</a>
             </p>
         </div>
@@ -240,7 +241,7 @@
             </p>
 
             <p class="option">
-                <a href="mailto:christelle@ziliko.com" class="enveloppe">Lui écrire</a>
+                <a href="mailto:" id="romain" class="enveloppe">Lui écrire</a>
                 <a class="expand expand-verte" data-toggle="collapse" data-target="#suite-texte-romain">Lire la suite</a>
             </p>
         </div>
@@ -258,7 +259,7 @@
                 Comme il a été G.O. dans une autre vie, c’est tout naturellement que j’ai pensé à lui pour être mon témoin ! Merci Nico d’être ce que tu es ! Ne change rien …
             </p>
             <p class="option">
-                <a href="mailto:christelle@ziliko.com" class="enveloppe">Lui écrire</a>
+                <a href="mailto:" id="nicolas" class="enveloppe">Lui écrire</a>
                 <a class="expand expand-verte" data-toggle="collapse" data-target="#suite-texte-nicolas">Lire la suite</a>
             </p>
         </div>
@@ -279,7 +280,7 @@
         <div class="span4 lieux">
             <p class="photo"> <img class="perso-trait" src="img/perso_trait.png" /></p>
             <p class="photo"><img src="img/illus_lieu_1.png" /></p>
-            <p class="photo">
+            <p class="photo bg-trait2">
                 <img src="img/pin_rose.png"> 
                 <a href="http://maps.google.ca/maps?q=mairie+de+la+carqueiranne&ll=43.06337,6.015701&spn=0.270395,0.577469&fb=1&gl=ca&hq=mairie+de+la&hnear=0x12c922044a9b6e71:0x5a4a08f4929b8fb7,Carqueiranne,+France&cid=0,0,2699421272487845129&t=m&z=11" >
                     Voir la carte
@@ -289,19 +290,18 @@
         <div class="span4 lieux">
             <p class="photo"> <img class="perso-trait" src="img/perso_trait.png" /></p>
             <p class="photo"><img src="img/illus_lieu_2.png" /></p>
-            <p class="photo">
-                <span><img src="img/pin_verte.png"> 
+            <p class="photo bg-trait2">
+                <img src="img/pin_verte.png"> 
                 <a class="verte" href="http://maps.google.ca/maps?q=Auberge+Lou+Petoulet,+Chemin+du+Petoulet,+Carqueiranne,+France&hl=fr&ie=UTF8&ll=43.095154,6.085997&spn=0.033782,0.072184&sll=43.06337,6.015701&sspn=0.270395,0.577469&gl=ca&hq=Auberge+Lou+Petoulet,&hnear=Chemin+du+Petoulet,+83320+Carqueiranne,+Var,+Provence-Alpes-C%C3%B4te+d'Azur,+France&t=m&z=14" >
                     Voir la carte
                 </a>
-                </span>
             </p>
 
         </div>
         <div class="span4 lieux">
             <p class="photo"><img class="perso-trait" src="img/perso_trait.png" /></p>
             <p class="photo"><img src="img/illus_lieu_3.png" /></p>
-            <p class="photo">
+            <p class="photo bg-trait2">
                 <img src="img/pin_rose.png"> 
                 <a href="http://maps.google.ca/maps?q=Auberge+Lou+Petoulet,+Chemin+du+Petoulet,+Carqueiranne,+France&hl=fr&ie=UTF8&ll=43.095154,6.085997&spn=0.033782,0.072184&sll=43.06337,6.015701&sspn=0.270395,0.577469&gl=ca&hq=Auberge+Lou+Petoulet,&hnear=Chemin+du+Petoulet,+83320+Carqueiranne,+Var,+Provence-Alpes-C%C3%B4te+d'Azur,+France&t=m&z=14" >
                     Voir la carte
@@ -327,92 +327,96 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             <p class="photo"><img src="img/etiquette_hebergement.png" /></p>
         </div>
     </div>
-    <div class="row-fluid max900">
-        <div class="span12 small">
-            <p class="marge">Pour vous faciliter la vie, nous proposons une liste d’hébergements dans la région de Carqueiranne. Nous vous conseillons de vous y prendre à l’avance pour mettre toutes les chances de votre côté!</p>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-        <div class="span4">
-            <h3><a href="http://www.hotelrichiardi.com/">Hôtel Richiardi</a></h3>
-            <p>Pour 2 nuits min pour 2 personnes 140€</p>
-        </div>
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-        <div class="span4">
-            <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
-            <p>Chambre de 120€ la nuit 2 personnes</p>
-        </div>
-    </div>
-
     <div class="row-fluid">
         <div class="span12 small">
             <p class="marge">Pour vous faciliter la vie, nous proposons une liste d’hébergements dans la région de Carqueiranne. Nous vous conseillons de vous y prendre à l’avance pour mettre toutes les chances de votre côté!</p>
         </div>
+    </div> 
+    <div class="padding-hebergement">
+        <div class="row-fluid">
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+            <div class="span4">
+                <h3><a href="http://www.hotelrichiardi.com/">Hôtel Richiardi</a></h3>
+                <p>Pour 2 nuits min pour 2 personnes 140€</p>
+            </div>
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+            <div class="span4">
+                <h3><a href="http://www.hotel-brise-marine.fr/">Hôtels & Maison d’hôtes Brise Marine</a></h3>
+                <p>Chambre de 120€ la nuit 2 personnes</p>
+            </div>
+        </div>
     </div>
 
     <div class="row-fluid">
-        <div class="span4">
-            <p><a href="http://www.likhom.com/">www.likhom.com</a></p>
-        </div>
-        <div class="span4">
-            <p><a href="http://www.charme-traditions.com/">www.charme-traditions.com</a></p>
-        </div>
-        <div class="span4">
-            <p><a href="http://www.chambredhotesfrance.com/">www.chambredhotesfrance.com</a></p>
+        <div class="span12 small">
+            <p class="marge">Pour vous faciliter la vie, nous proposons une liste d’hébergements dans la région de Carqueiranne. Nous vous conseillons de vous y prendre à l’avance pour mettre toutes les chances de votre côté!</p>
         </div>
     </div>
 
-    <div class="row-fluid">
-        <div class="span4">
-            <p><a href="http://www.gites-de-france.com/">www.gites-de-france.com</a></p>
+    <div class="padding-hebergement">
+        <div class="row-fluid">
+            <div class="span4">
+                <p><a href="http://www.likhom.com/">www.likhom.com</a></p>
+            </div>
+            <div class="span4">
+                <p><a href="http://www.charme-traditions.com/">www.charme-traditions.com</a></p>
+            </div>
+            <div class="span4">
+                <p><a href="http://www.chambredhotesfrance.com/">www.chambredhotesfrance.com</a></p>
+            </div>
         </div>
-        <div class="span4">
-            <p><a href="http://www.abrit1.com/">www.abrit1.com</a></p>
+
+        <div class="row-fluid">
+            <div class="span4">
+                <p><a href="http://www.gites-de-france.com/">www.gites-de-france.com</a></p>
+            </div>
+            <div class="span4">
+                <p><a href="http://www.abrit1.com/">www.abrit1.com</a></p>
+            </div>
         </div>
     </div>
 
@@ -423,7 +427,7 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             <p class="photo"><img src="img/etiquette_hebergement.png" /></p>
         </div>
     </div>
-    <div class="row-fluid max900">
+    <div class="row-fluid">
         <div class="span12">
             <p class="marge">Un faire part vous sera envoyé très bientôt. Mais si vous êtes partant, vous pouvez dès à présent nous transmettre votre réponse en complétant ce formulaire:</p>
         </div>
@@ -433,7 +437,7 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             <p class="photo"><img src="img/form_hachures.png" /></p>
         </div>
     </div>
-    <div class="row-fluid max900">
+    <div class="row-fluid">
         <div class="span12">
             <form action="/rsvp" method="POST">
                 <div class="span5">
@@ -467,7 +471,7 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             <p class="photo"><img src="img/etiquette_musique.png" /></p>
         </div>
     </div>
-    <div class="row-fluid max900">
+    <div class="row-fluid">
         <div class="span12">
             <p class="marge">Vous rêvez de danser sur votre chanson preférée lors de notre soireé?! Faites vos suggestions!</p>
         </div>
@@ -477,7 +481,7 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             <p class="photo"><img src="img/form_hachures.png" /></p>
         </div>
     </div>
-    <div class="row-fluid max900">
+    <div class="row-fluid">
         <div class="span12">
             <form action="/music" method="POST">
                 <div class="span6">
@@ -507,7 +511,7 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
             <p class="photo"><img src="img/etiquette_voyage.png" /></p>
         </div>
     </div>
-    <div class="row-fluid max900">
+    <div class="row-fluid">
         <div class="span12">
             <p class="marge">Pas de liste de mariage pour nous. Nous avons depuis le temps accumulé tout ce dont on a besoin.Vous savez, nous sommes déjà un vieux couple !!! Une urne sera à votre disposition afin que vous puissiez contribuer au financement de notre voyage de noces.</p>
         </div>
@@ -515,9 +519,9 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
 </div>
 
 <div class="container-fluid">
-    <div class="row-fluid right max900">
+    <div class="row-fluid right">
         <div class="span12">
-            <p>2012 Tous droits réservés - Création graphique charlottegot@gmail.com - Intégration et développement : <a href="http://www.jeremyrobertou.fr">Jérémy</a> et <a href="http://www.florentlamoureux.fr">Florent</a>.</p>
+            <p>&#169;2012 Tous droits réservés - Design <a href="http://www.charlottegot.com">Charlotte</a> - Intégration et développement : <a href="http://www.jeremyrobertou.fr">Jérémy</a> et <a href="http://www.florentlamoureux.fr">Florent</a>.</p>
         </div>
     </div>
 </div>
@@ -532,8 +536,8 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
     </div>
     <div class="modal-body">
         <p class="photo">
-            <input type="text" name="email" placeholder="Email"><br/>
-            <textarea rows="5" name="contenu" placeholder="Message"></textarea>
+            <input type="text" name="email" placeholder="Votre email"><br/>
+            <textarea rows="5" name="contenu" placeholder="Votre message"></textarea>
         </p>
     </div>
     <p class="feedback"><p/>
@@ -607,20 +611,64 @@ Le blanc étant bien entendu reservé à la mariée. Merci</p>
         return false;
     });
 
-    var verificationMail = function(mail){
-            
-        var verif   = /^[a-zA-Z0-9_-_.]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/
-        
-        if (verif.exec(mail)){
-            
-            return true;
-            
-        }else{
-            
-            return false;
-            
-        }           
+    var addmailto = function(){
+
+        var mto = 'mailto',
+            at = '@';
+
+        var objMail = {
+            thomas: {
+                name: "spehner_thomas",
+                domain: "hotmail",
+                extension: ".com"
+            },
+            cecile: {
+                name: "cecile_mery",
+                domain: "yahoo",
+                extension: ".fr"
+            },
+            anneso: {
+                name: "annesophie.nigro",
+                domain: "gmail",
+                extension: ".com"
+            },
+            jacques: {
+                name: "gijack",
+                domain: "hotmail",
+                extension: ".fr"
+            },
+            romain : {
+                name: "romain.zucker",
+                domain: "gmail",
+                extension: ".com"
+            },
+            nicolas: {
+                name: "staedel_n",
+                domain: "yahoo",
+                extension: ".fr"
+            }
+        };
+
+        var temoins = null;
+        $(".enveloppe").each(function(){
+            temoins = objMail[this.id];
+            console.log('id: '+this.id);
+            console.log('mailto: '+mto+':' + temoins.name + at + temoins.domain + temoins.extension);
+            $(this).attr("href", mto +':' + temoins.name + at + temoins.domain + temoins.extension);
+        });
     };
+    addmailto();
+
+    /*
+    var verificationMail = function(mail){
+        var verif   = /^[a-zA-Z0-9_-_.]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/
+        if (verif.exec(mail)){
+            return true;
+        }
+        return false;         
+    };
+    */
+
 </script>
   </body>
 </html>
