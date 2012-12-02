@@ -11,7 +11,9 @@ body{
 	margin: auto;
 	line-height: 20px;
 	color: #797979;
+	font-size: 13px;
 }
+
 .navbar {
 	background:url('../img/bck_header.png') fixed repeat-x;
 	z-index: 1000;
@@ -60,7 +62,7 @@ body{
 	padding:20px;
 }
 .container-fluid  > * {  	
-	max-width: 1200px;
+	max-width: 900px;
 	margin: auto;
 }
 
@@ -85,7 +87,7 @@ input {
 	height:31px;
 	width:32px;
 	cursor: pointer;
-	background:url(../img/form_btn.png)no-repeat 0 0;
+	background:url('../img/form_btn.png')no-repeat 0 0;
 	display: inline-block;
 	text-decoration: none;
 	vertical-align: middle;
@@ -117,12 +119,14 @@ input {
 	text-align: center;
 	margin-top:15px;
 	margin-bottom: 25px;
-	background: url(../img/etiquette-ribbon-trait.png) no-repeat 50% 50%;
+	background: url('../img/etiquette-ribbon-trait.png') no-repeat 50% 50%;
 	width: 100%;
 	img {min-width: 236px;min-height: 31px;}
 	p{margin:0;padding:0;}
 }
-
+.temoins-garcon{
+	margin-top: 30px;
+}
 .temoins{
 
 	p {
@@ -138,6 +142,7 @@ input {
 		width: 11px;
 		height: 7px;
 		cursor: pointer;
+		text-shadow: 0 1px 0 #fff;
 		&.expand-rose{
 			color: #f9847a;
 		}
@@ -147,15 +152,22 @@ input {
 	}
 	.enveloppe{
 		cursor: pointer;
-		width: 14px;
-		height: 11px;
-		margin-top: 6px;
+		width: 68px;
+		height: 13px;
+		margin-top: 4px;
 		display: inline;
 		float: right;
-		background: url(../img/enveloppe.png)no-repeat 0 0;
+		font-size: 12px;
+		line-height: 12px;
+		color: #b1a2a1;
+		text-shadow: 0 1px 0 #fff;
+		background: url('../img/enveloppe.png')no-repeat 53px 1px;
 	}
 }
 
+.padding-hebergement{
+	padding-left: 30px;
+}
 
 .lieux {
 	margin-bottom: 15px;
@@ -165,11 +177,11 @@ input {
 		text-decoration: underline;
 		&.verte:hover{color: #93d250;}
 	}
-}
-
-
-.max900{
-	max-width:900px;
+	.bg-trait2 {
+		width: 260px;
+		margin: auto;
+		background: url('../img/perso_trait_2.png')no-repeat 0px 50%;
+	}
 }
 
 #musique, #rsvp{
@@ -180,7 +192,12 @@ input{
 	margin-bottom:0;
 	margin-left: 0;
 	width: 100%;
+<<<<<<< HEAD
 	font-size: 13px!important;
+=======
+	font-size: 12px!important;
+	font-family: 'Anaheim'!important;
+>>>>>>> df301a555f5a59dd3005d133660c074a470be1ed
 }
 
 .marge {
@@ -218,6 +235,7 @@ h3 {
 	font-size: 1.3em;
 	line-height: 1.35em;
 	font-weight: normal;
+	font-size: 12px;
 }
 
 .small p {
@@ -229,6 +247,8 @@ h3 {
 #formulaire-contact{
 	input, textarea{
 		width:90%;
+		font-size: 12px!important;
+		font-family: 'Anaheim'!important;
 	}
 
 }
