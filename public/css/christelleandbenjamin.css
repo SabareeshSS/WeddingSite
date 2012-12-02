@@ -6,6 +6,7 @@ body {
   margin: auto;
   line-height: 20px;
   color: #797979;
+  font-size: 13px;
 }
 .navbar {
   background: url('../img/bck_header.png') fixed repeat-x;
@@ -50,7 +51,7 @@ body {
   padding: 20px;
 }
 .container-fluid > * {
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
 }
 .container-fluid.white {
@@ -118,6 +119,9 @@ input {
   margin: 0;
   padding: 0;
 }
+.temoins-garcon {
+  margin-top: 30px;
+}
 .temoins p {
   max-width: 260px;
   margin: auto;
@@ -130,6 +134,7 @@ input {
   width: 11px;
   height: 7px;
   cursor: pointer;
+  text-shadow: 0 1px 0 #fff;
 }
 .temoins .expand.expand-rose {
   color: #f9847a;
@@ -139,12 +144,19 @@ input {
 }
 .temoins .enveloppe {
   cursor: pointer;
-  width: 14px;
-  height: 11px;
-  margin-top: 6px;
+  width: 68px;
+  height: 13px;
+  margin-top: 4px;
   display: inline;
   float: right;
-  background: url(../img/enveloppe.png) no-repeat 0 0;
+  font-size: 12px;
+  line-height: 12px;
+  color: #b1a2a1;
+  text-shadow: 0 1px 0 #fff;
+  background: url(../img/enveloppe.png) no-repeat 53px 1px;
+}
+.padding-hebergement {
+  padding-left: 30px;
 }
 .lieux {
   margin-bottom: 15px;
@@ -159,8 +171,10 @@ input {
 .lieux a.verte:hover {
   color: #93d250;
 }
-.max900 {
-  max-width: 900px;
+.lieux .bg-trait2 {
+  width: 260px;
+  margin: auto;
+  background: url(../img/perso_trait_2.png) no-repeat 0px 50%;
 }
 #musique .feedback,
 #rsvp .feedback {
@@ -172,7 +186,8 @@ input {
   margin-bottom: 0;
   margin-left: 0;
   width: 100%;
-  font-size: 13px!important;
+  font-size: 12px!important;
+  font-family: 'Anaheim' !important;
 }
 .marge {
   margin: 20px 0;
@@ -205,6 +220,7 @@ h3 {
   font-size: 1.3em;
   line-height: 1.35em;
   font-weight: normal;
+  font-size: 12px;
 }
 .small p {
   line-height: 1.15em!important;
@@ -215,4 +231,6 @@ h3 {
 #formulaire-contact input,
 #formulaire-contact textarea {
   width: 90%;
+  font-size: 12px!important;
+  font-family: 'Anaheim' !important;
 }
