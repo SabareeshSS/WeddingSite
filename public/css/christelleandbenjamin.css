@@ -82,7 +82,7 @@ input {
   height: 31px;
   width: 32px;
   cursor: pointer;
-  background: url(../img/form_btn.png) no-repeat 0 0;
+  background: url('../img/form_btn.png') no-repeat 0 0;
   display: inline-block;
   text-decoration: none;
   vertical-align: middle;
@@ -111,7 +111,7 @@ input {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 25px;
-  background: url(../img/etiquette-ribbon-trait.png) no-repeat 50% 50%;
+  background: url('../img/etiquette-ribbon-trait.png') no-repeat 50% 50%;
   width: 100%;
 }
 .etiquette img {
@@ -156,7 +156,7 @@ input {
   line-height: 12px;
   color: #b1a2a1;
   text-shadow: 0 1px 0 #fff;
-  background: url(../img/enveloppe.png) no-repeat 53px 1px;
+  background: url('../img/enveloppe.png') no-repeat 53px 1px;
 }
 .padding-hebergement {
   padding-left: 30px;
@@ -177,7 +177,7 @@ input {
 .lieux .bg-trait2 {
   width: 260px;
   margin: auto;
-  background: url(../img/perso_trait_2.png) no-repeat 0px 50%;
+  background: url('../img/perso_trait_2.png') no-repeat 0px 50%;
 }
 #musique .feedback,
 #rsvp .feedback {
@@ -189,12 +189,9 @@ input {
   margin-bottom: 0;
   margin-left: 0;
   width: 100%;
-<<<<<<< HEAD
   font-size: 13px!important;
-=======
   font-size: 12px!important;
   font-family: 'Anaheim' !important;
->>>>>>> df301a555f5a59dd3005d133660c074a470be1ed
 }
 .marge {
   margin: 20px 0;
