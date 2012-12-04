@@ -163,6 +163,7 @@ input {
 }
 .padding-hebergement {
   padding-left: 30px;
+  font-size: 12px!important;
 }
 .lieux {
   margin-bottom: 15px;
@@ -227,13 +228,16 @@ h3 {
   font-size: 1.3em;
   line-height: 1.35em;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 13px;
 }
 .small p {
   line-height: 1.15em!important;
 }
 .palette {
   margin-top: 10px;
+}
+.palette {
+  color: #f9847a;
 }
 #formulaire-contact input,
 #formulaire-contact textarea {
