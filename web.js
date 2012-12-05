@@ -14,10 +14,10 @@ var app = express.createServer(
 
 var sendMail = function(mailOptions, cb) {
   mailOptions.from = "Mariage <christelleandbenjamin@gmail.com>";
-  mailOptions.to = "";
+  mailOptions.to = "Mariage <christelleandbenjamin@gmail.com>";
 
   var transport = nodemailer.createTransport("SMTP", {
-      service: "Gmail",
+      service: "",
       auth: {
           user: "",
           pass: ""
