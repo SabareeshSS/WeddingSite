@@ -17,10 +17,10 @@ var sendMail = function(mailOptions, cb) {
   mailOptions.to = "Mariage <christelleandbenjamin@gmail.com>";
 
   var transport = nodemailer.createTransport("SMTP", {
-      service: "",
+      service: "Gmail",
       auth: {
-          user: "",
-          pass: ""
+          user: "christelleandbenjamin@gmail.com",
+          pass: "31082013"
       }
   });
   transport.sendMail(mailOptions, function(error, response){
