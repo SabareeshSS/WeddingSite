@@ -15,7 +15,7 @@ body {
   font-size: 13px;
 }
 .navbar {
-  background: url('../img/bck_header.png') fixed repeat-x;
+  background: url('../img/bck_header.png') no-repeat 50% 0;
   z-index: 1000;
 }
 .navbar .btn-navbar {
@@ -28,7 +28,8 @@ body {
   border: none;
 }
 .navbar .navbar-inner ul.nav {
-  margin: 0 10px 0 100px;
+  left: 17%;
+  margin: 0 10px 0 0;
 }
 .navbar .navbar-inner ul.nav li > a {
   line-height: 64px;
@@ -41,6 +42,13 @@ body {
   color: #000;
 }
 @media (max-width: 979px) {
+  .navbar .navbar-inner {
+    height: 20px;
+  }
+  .navbar .navbar-inner ul.nav {
+    left: 0!important;
+    background: white;
+  }
   .navbar-fixed-top {
     margin-bottom: 0;
     background: url('../img/bck-general.jpg') repeat;

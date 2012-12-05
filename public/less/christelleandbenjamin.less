@@ -17,7 +17,7 @@ body{
 }
 
 .navbar {
-	background:url('../img/bck_header.png') fixed repeat-x;
+	background: url('../img/bck_header.png') no-repeat 50% 0;
 	z-index: 1000;
 	.btn-navbar {
 		margin-right: 30px;
@@ -29,7 +29,8 @@ body{
 		border:none;
 
 		ul.nav {
-			margin: 0 10px 0 100px;
+			left: 17%;
+			margin: 0 10px 0 0;
 			li > a {
 				line-height: 64px;
 				margin:0;
@@ -43,6 +44,13 @@ body{
 	}
 }
 @media (max-width: 979px) {
+	.navbar .navbar-inner {
+		height:20px;
+		ul.nav {
+			left:0!important;
+			background:white;
+		}
+	}
 	.navbar-fixed-top {
 		margin-bottom: 0;
 		background:url('../img/bck-general.jpg') repeat;
